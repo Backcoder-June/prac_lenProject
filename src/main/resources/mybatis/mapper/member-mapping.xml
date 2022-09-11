@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="member.MemberDAO" >
+	
+	<select id="memberlist" resultType="memberdto" >
+		select * from member  
+	</select>
+
+	<select id="membercount" resultType="int">
+		select count(*) from member   
+	</select>
+
+<select id="selectOneMember" resultType="memberdto" parameterType="String" >
+    select * from member where id=#{a}
+</select>
+
+<insert id="insertmember" parameterType="memberdto" >
+ insert into member values(#{id},#{password},#{name},#{phone},#{email},now()) 
+</insert>
+
+<update id="updateMember" parameterType="memberdto" >
+	update member set id=#{id}, name=#{name}, phone=#{phone}, email=#{email} where id=#{id}
+</update>
+
+<delete id="deleteMember" parameterType="String">
+delete from member where id=#{id}
+</delete>
+
+<select id="idChk" resultType="int" parameterType="memberdto">
+	select count(*) from member where id= #{id}
+</select>
+
+<select id="logincheck" resultType="memberdto">
+	select * from member where id=#{id}
+</select>
+
+</mapper>
+
