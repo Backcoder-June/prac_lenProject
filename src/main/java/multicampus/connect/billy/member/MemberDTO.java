@@ -1,4 +1,4 @@
-package member;
+package multicampus.connect.billy.member;
 
 import org.springframework.stereotype.Component;
 

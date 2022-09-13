@@ -8,7 +8,7 @@
 <!-- 패키지명 알리아스 주기 -->
 
 <typeAliases>
-	<typeAlias type="member.MemberDTO" alias="memberdto"/>
+	<typeAlias type="multicampus.connect.billy.member.MemberDTO" alias="memberdto"/>
 </typeAliases>
 
 

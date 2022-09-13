@@ -1,4 +1,4 @@
-package member;
+package multicampus.connect.billy.member;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
